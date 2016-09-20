@@ -1,0 +1,16 @@
+<?php
+	if ($page==1) {echo '<li><a href="provision_dashboard.php" class="sidebar-li-active"><span class="icon color5"><i class="fa fa-home"></i></span>Dashboard</a></li>';} else {echo '<li><a href="provision_dashboard.php"><span class="icon color5"><i class="fa fa-home"></i></span>Dashboard</a></li>';}
+	echo '<br>';
+	if ($page==2) {echo '<li><a href="provision_help.php" class="sidebar-li-active"><span class="icon color5"><i class="fa fa-support"></i></span>Getting Started</a></li>';} else {echo '<li><a href="provision_help.php"><span class="icon color5"><i class="fa fa-support"></i></span>Getting Started</a></li>';}
+	echo '<br>';
+	if ($page==3) {echo '<li><a href="provision_phones.php" class="sidebar-li-active"><span class="icon color5"><i class="fa fa-bars"></i></span>Manage Devices</a></li>';} else {echo '<li><a href="provision_phones.php"><span class="icon color5"><i class="fa fa-bars"></i></span>Manage Devices</a></li>';}
+	if ($page==9) {echo '<li><a href="provision_groups.php" class="sidebar-li-active"><span class="icon color5"><i class="fa fa-group"></i></span>Manage Groups</a></li>';} else {echo '<li><a href="provision_groups.php"><span class="icon color5"><i class="fa fa-group"></i></span>Manage Groups</a></li>';}
+	if ($page==4) {echo '<li><a href="provision_global.php" class="sidebar-li-active"><span class="icon color5"><i class="fa fa-globe"></i></span>Global Settings</a></li>';} else {echo '<li><a href="provision_global.php"><span class="icon color5"><i class="fa fa-globe"></i></span>Global Settings</a></li>';}
+	if ($page==5) {echo '<li><a href="provision_specific.php" class="sidebar-li-active"><span class="icon color5"><i class="fa fa-share-alt"></i></span>Individual Settings</a></li>';} else {echo '<li><a href="provision_specific.php"><span class="icon color5"><i class="fa fa-share-alt"></i></span>Individual Settings</a></li>';}
+	echo '<br>';
+	if (phone_count_np() > 0) {$provision_string = '<span class="label label-danger">'.phone_count_np().'</span>';} else {$provision_string="";}
+	if ($page==6) {echo '<li><a href="provision_deploy.php" class="sidebar-li-active"><span class="icon color5"><i class="fa fa-exclamation-triangle"></i></span>DEPLOY '.$provision_string.'</a></li>';} else {echo '<li><a href="provision_deploy.php"><span class="icon color5"><i class="fa fa-exclamation-triangle"></i></span>DEPLOY '.$provision_string.'</a></li>';}
+	if ($page==7) {echo '<li><a href="provision_scheduler.php" class="sidebar-li-active"><span class="icon color5"><i class="fa fa-calendar"></i></span>Task Scheduler</a></li>';} else {echo '<li><a href="provision_scheduler.php"><span class="icon color5"><i class="fa fa-calendar"></i></span>Task Scheduler</a></li>';}
+	echo '<br>';
+	if ($page==8) {echo '<li><a href="provision_admin.php" class="sidebar-li-active"><span class="icon color5"><i class="fa fa-gears"></i></span>Administration</a></li>';} else {echo '<li><a href="provision_admin.php"><span class="icon color5"><i class="fa fa-gears"></i></span>Administration</a></li>';}
+?>

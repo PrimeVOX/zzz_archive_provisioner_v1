@@ -1,1 +1,1 @@
-Hello World!\n
+This is a sample README file.
